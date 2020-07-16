@@ -23,3 +23,12 @@ Appointment.create([
   {appointment_datetime: DateTime.new(2016, 05, 31, 17, 00, 0), patient: homer, doctor: hawkeye},
   {appointment_datetime: DateTime.new(2017, 06, 03, 10, 00, 0), patient: marge, doctor: meredith}
 ])
+
+
+#rails g model Doctor name:string department:text --no-test-framework --skip-routes
+#rails g model Patient name:string age:integer --no-test-framework --skip-routes
+#rails g model Appointment appointment_datetime:datetime --no-test-framework --skip-routes
+#rails g controller Doctors show --no-helper --skip-routes --no-test-framework
+#rails g controller Patients show index --no-helper --skip-routes --no-test-framework
+#rails g controller Appointments show --no-helper --skip-routes --no-test-framework
+
