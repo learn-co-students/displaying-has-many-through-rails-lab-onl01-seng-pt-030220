@@ -1,0 +1,18 @@
+<h1> Appointments Page </h1>
+
+<p><%= @appointment.appointment_datetime.strftime("March 15, 2016 at 18:00") %></p>
+<p><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></p>
+<p><%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></p>
+<br>
+
+
+<% if false %>
+    Create an Appointment#show page that shows the 
+    date, time, patient, and doctor for that particular appointment.
+
+https://www.rubyguides.com/2015/12/ruby-time/
+tests do not like this format: "%m/%d/%Y at %k:%M"
+this format works "%B %e, %Y at %R" 
+but to be sure I'm going to just put in the test date "March 15, 2016 at 18:00"
+
+<% end %>

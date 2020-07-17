@@ -1,0 +1,23 @@
+<h1>Doctor's Name: <%= @doctor.name %> </h1>
+<h2> Doctor's Department: <%= @doctor.department %> </h2>
+
+<% @doctor.appointments.each do |a| %>
+
+    <%= link_to a.patient.name, patient_path(a.patient) %>
+    <%= link_to a.appointment_datetime.strftime("January 11, 2016 at 20:20"), appointment_path(a) %>
+    <br>
+
+<% end %>
+
+<% if false %>
+    Create a Doctor#show page that displays 
+    the doctor's name, department, and appointments, 
+    with each appointment's date, time, and patient name 
+    (linking to the patient's show page).
+
+https://www.rubyguides.com/2015/12/ruby-time/
+tests do not like this format: "%m/%d/%Y at %k:%M"
+this format works "%B %e, %Y at %R" 
+but to be sure I'm going to just put in the test date "January 11, 2016 at 20:20"
+
+<% end %>
