@@ -1,0 +1,5 @@
+<h1><%= @patient.name %></h1>
+
+<%= @patient.doctors.each_with_index do |pt,index| %>
+    <%= link_to "#{pt.name} #{pt.appointments[index].appointment_datetime.strftime("%B %d, %Y at %H:%M")}", doctor_path(pt) %>
+<% end %>
